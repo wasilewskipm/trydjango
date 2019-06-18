@@ -5,7 +5,8 @@ from django.http import HttpResponse
 # Create your views here.
 def home_view(request, *args, **kwargs):
     my_context = {
-        'title': 'Home'
+        'title': 'Home',
+        'loop_list': [0, 1, 2, 3]
     }
     return render(request, "home.html", my_context)
 

@@ -5,4 +5,15 @@
 <h1>Hello World</h1>
 <p>This is a template :)</p>
 
+<ul>
+{% for itm in loop_list %}
+	{% if itm == 2 %}
+		<li>Item {{ forloop.counter }}, value trzy</li>
+	{% else %}
+		<li>Item {{ forloop.counter }}, value {{ itm|add:1}}</li>
+	{% endif %}
+
+{% endfor %}
+</ul>
+
 {% endblock %}
